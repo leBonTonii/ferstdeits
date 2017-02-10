@@ -1,14 +1,12 @@
 module.exports = function(router) {
+  
   var Category = require('../models/Category');
-  // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-  /*router.get('/', function(req, res) {
-      res.json({ message: 'hooray! welcome to our api!' });
-  });*/
+  
 
-router.route('/categories')
+  router.route('/categories')
   // create a category (accessed at POST http://localhost:8080/api/categorys)
   .post(function(req, res) {
-    var category = new Category();      // create a new instance of the Category model
+      var category = new Category();      // create a new instance of the Category model
       category.name = req.body.name;  // set the categories name (comes from the request)
 
       // save the category and check for errors
