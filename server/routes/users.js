@@ -48,9 +48,9 @@ module.exports = function(router) {
 	      	if (err)
 	        	return response.send(err);
 
-	      	if (request.body.name)
+	      	if (request.body.name !== undefined)
 	        	user.name = req.body.name;
-	      	if (req.body.categories)
+	      	if (req.body.categories !== undefined)
 	        	user.categories = req.body.categories;
 	        
 	      	// save the user
