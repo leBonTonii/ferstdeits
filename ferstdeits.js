@@ -28,6 +28,7 @@ var router = express.Router();              // get an instance of the express Ro
 // REGISTER OUR ROUTES -------------------------------
 require ('./server/routes/users.js') (router);
 require ('./server/routes/categories.js') (router);
+
 app.use('/api', router);
 
 // Catch all other routes and return the index file
